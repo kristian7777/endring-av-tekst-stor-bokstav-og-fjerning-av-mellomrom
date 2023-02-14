@@ -41,15 +41,17 @@
         function storBIngenM(){
             inputTekst = Rinputtext;
             inputTekst = inputTekst.substring(0,1).toUpperCase() + inputTekst.substring(1).toLowerCase();
-            inputTekst = inputTekst;
-            inputTekst.replace('a', 'b');
+            
+            inputTekst.replace(/\s/g, '') ;
             
             show();
         }
         function fjernmellomrom(){
-            
+            inputTekst.replace(' ', '') ;
             show();
         }
+       
+        
 
         
     </script>
