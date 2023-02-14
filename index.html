@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hs</title>
+</head>
+
+<body>
+    <div id="app"></div>
+
+    <script>
+        // MODEL
+        let inputTekst = 'none also'
+        
+        let Rinputtext = 'none'
+
+        // VIEW
+        show();
+        function show() {
+            let html = '';
+            html += `<input oninput="Rinputtext = this.value" type="text"> <button onclick="changeTekst()">gi input tekst</button>`;
+            html += `<p>inputTekst current tekst: [${Rinputtext}]</p>`
+            html += `<p>↓knapp for og gjøre første bokstav i tekst stor og fjerning av mellomrom↓</p>`
+            html += `<button type="text" onclick="storBIngenM()">endre tekst knapp</button>`;
+            html += `<p> Endret tekst: [${inputTekst}]</p>`
+            html += `<button type="text" onclick="fjernmellomrom()">fjern mellomrom</button>`;
+            document.getElementById("app").innerHTML = html;
+        }
+
+        // CONTROLLER
+
+        
+        function changeTekst() {
+            
+            
+            show();
+        }
+        function storBIngenM(){
+            inputTekst = Rinputtext;
+            inputTekst = inputTekst.substring(0,1).toUpperCase() + inputTekst.substring(1).toLowerCase();
+            inputTekst = inputTekst;
+            inputTekst.replace('a', 'b');
+            
+            show();
+        }
+        function fjernmellomrom(){
+            
+            show();
+        }
+
+        
+    </script>
+</body>
+</html>
