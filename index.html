@@ -42,12 +42,12 @@
             inputTekst = Rinputtext;
             inputTekst = inputTekst.substring(0,1).toUpperCase() + inputTekst.substring(1).toLowerCase();
             
-            inputTekst.replace(/\s/g, '') ;
+            inputTekst = inputTekst.replace(" ", "");
             
             show();
         }
         function fjernmellomrom(){
-            inputTekst.replace(' ', '') ;
+            inputTekst = inputTekst.replace(" ", "");
             show();
         }
        
